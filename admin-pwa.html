@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTR Admin</title>
+  <link rel="manifest"         href="/admin-manifest.json" />
+  <link rel="apple-touch-icon" href="/htr-admin-icon.png" />
+  <meta name="apple-mobile-web-app-capable"          content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title"            content="HTR Admin" />
+  <meta name="theme-color"                           content="#0f172a" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:#0f172a;min-height:100vh;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      font-family:system-ui,-apple-system,sans-serif;color:#fff;padding:32px 24px;
+    }
+    img{width:100px;height:100px;border-radius:24px;margin-bottom:24px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+    h1{font-size:24px;font-weight:700;letter-spacing:1px;margin-bottom:8px}
+    .sub{font-size:14px;opacity:.5;margin-bottom:40px;text-align:center}
+    .card{
+      background:rgba(255,255,255,.08);border-radius:16px;
+      padding:20px 24px;margin-bottom:32px;width:100%;max-width:320px;
+    }
+    .card-title{font-size:11px;opacity:.5;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
+    ol{padding-left:18px;line-height:2.3;font-size:15px;opacity:.9}
+    .btn{
+      display:block;background:#3b82f6;color:#fff;border:none;border-radius:14px;
+      padding:16px 0;font-size:17px;font-weight:600;cursor:pointer;
+      width:100%;max-width:320px;text-decoration:none;text-align:center;
+    }
+    .note{font-size:12px;opacity:.3;margin-top:14px;text-align:center}
+  </style>
+</head>
+<body>
+  <img src="/htr-admin-icon.png" alt="HTR Admin" />
+  <h1>HTR Admin</h1>
+  <p class="sub">Hi-Tech Repair Group</p>
+
+  <div class="card">
+    <div class="card-title">Добавить на экран «Домой»</div>
+    <ol>
+      <li>Нажмите <strong>Share</strong> (↑) внизу Safari</li>
+      <li>Выберите <strong>«На экран "Домой"»</strong></li>
+      <li>Нажмите <strong>«Добавить»</strong></li>
+    </ol>
+  </div>
+
+  <a class="btn" href="/admin">Открыть Admin Panel →</a>
+  <p class="note">Страница не закрывается сама — добавьте сначала</p>
+</body>
+</html>
