@@ -1,0 +1,23 @@
+name: Deploy Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy htrgrouptx.com static site
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 1f3039d6832ffd0d9b8ab3fb2c8b6788
+          command: pages deploy . --project-name=htrgrouptx --branch=main
